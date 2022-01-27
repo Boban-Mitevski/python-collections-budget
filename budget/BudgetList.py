@@ -20,14 +20,14 @@ class BudgetList:
         return len(self.expenses) + len(self.overages)
 
 def main():
-    myBugdetList = BudgetList(1200)
+    myBudgetList = BudgetList(1200)
     expenses = Expense.Expenses()
     expenses.read_expenses('data/spending_data.csv')
     for expense in expenses.list:
-        myBugdetList.append(expense.amount)
+        myBudgetList.append(expense.amount)
     
-    print('The count of all expenses: ' + str(len(myBugdetList)))
-    
+    print('The count of all expenses: ' + str(len(myBudgetList)))
+
 if __name__ == "__main__":
     main()
 
